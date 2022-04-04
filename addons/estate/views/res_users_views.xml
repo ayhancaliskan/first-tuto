@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<odoo>
+    <!-- view qui est un heritage avec des ajouts de notre part -->
+    <record id="view_users_form" model="ir.ui.view">
+        <field name="name">res.users.form.inherit.estate</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="base.view_users_form"/>   <!-- ref se base sur la view deja existant afin d'heriter et ajouter notre logique de code suivant-->
+        <field name="arch" type="xml">
+            <notebook position="inside">
+                <page name="estate_properties" string="Real Estate Properties">
+                    <field name="property_ids"/>
+                </page>
+            </notebook>
+        </field>
+    </record>
+</odoo>
